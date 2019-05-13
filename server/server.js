@@ -23,6 +23,23 @@ const { auth } = require('./middleware/auth');
 const { admin } = require('./middleware/admin')
 
 //products
+app.get('/api/product/articles', (req, res)=>{
+    let order = req.query.order ? req.query.order : 'asc';
+    let sortBy = req.query.sortBy ? req.query.sortBy : "_id";
+    let limit = req.query.limit ? parseInt(req.query.limit) : 100;
+
+    Product.find().
+    populate('brand').
+    populate('wood').
+    sort([[sortBy, order]]).
+    limit(limit).
+    exec((err, articles)=>{
+        if (err) return res.status(400).send(err);
+        res.send(articles)
+    })
+
+})
+
 app.get('/api/product/articles_by_id', (req, res)=>{
     //we are able to query because we are using bodyParser.urlencoded
     let type = req.query.type;
@@ -36,6 +53,8 @@ app.get('/api/product/articles_by_id', (req, res)=>{
     }
     Product.
     find({'_id':{$in:items}}).
+    populate('brand').
+    populate('wood').
     exec((err, docs)=>{
         return res.status(200).send(docs)
     })
