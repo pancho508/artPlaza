@@ -3,7 +3,7 @@
 /client/node_modules
 
 .DS_Store
-.evn
+.env
 
 npm-debug.log
 npm-error.log

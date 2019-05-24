@@ -5,16 +5,12 @@ import faPhone from '@fortawesome/fontawesome-free-solid/faPhone';
 import faClock from '@fortawesome/fontawesome-free-solid/faClock';
 import faEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope';
 
-
-
-
-
 const Footer = () => {
     return (
         <footer className="bck_b_dark">
             <div className="container">
                 <div className="logo">
-                    Waves
+                    ArtValedor
                 </div>
                 <div className="wrapper">
                     <div className="left">
@@ -55,10 +51,12 @@ const Footer = () => {
                         </div>    
                     </div>
                     <div className="left">
-                        <h1>Be the first to know</h1>
+                        <h1>
+                        Síguenos
+                        </h1>
                         <div>
                             <div>
-                                Get the lastest info about just released art. Dont miss out. 
+                                Suscríbete al newsletter 
                             </div>
                         </div>
                     </div>
