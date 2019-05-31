@@ -11,24 +11,24 @@ export const validate = (element, formdata = []) => {
 
 
 
-
-export const update = ( element, formdata, formName) => {
+export const update = (element, formdata, formName ) => {
     const newFormdata = {
         ...formdata
     }
     const newElement = {
-       ...newFormdata(element.id)     
+        ...newFormdata[element.id]
     }
-        
+
     newElement.value = element.event.target.value;
 
     if(element.blur){
-        let validData = validate(newElement, formdata);
+        let validData = validate(newElement,formdata);
         newElement.valid = validData[0];
         newElement.validationMessage = validData[1];
     }
+
     newElement.touched = element.blur;
-    newFormdata[element.id] = newElement; 
+    newFormdata[element.id] = newElement;
 
     return newFormdata;
-} 
+}
