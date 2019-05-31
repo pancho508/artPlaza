@@ -6,40 +6,40 @@ import { connect } from 'react-redux';
 class Login extends Component {
 
     state = {
-        formError: false, 
-        formSuccess: '',
+        formError: false,
+        formSuccess:'',
         formdata:{
-            email:{
-                elements: 'input',
+            email: {
+                element: 'input',
                 value: '',
                 config:{
-                    name: 'email_imput',
+                    name: 'email_input',
                     type: 'email',
-                    palceholder: 'enter your email'
+                    placeholder: 'Enter your email'
                 },
                 validation:{
-                    required: true, 
-                    email: true 
+                    required: true,
+                    email: true
                 },
-                valid: false, 
+                valid: false,
                 touched: false,
-                validataionMessage: ''
+                validationMessage:''
             },
-            password:{
-                elements: 'input',
+            password: {
+                element: 'input',
                 value: '',
                 config:{
-                    name: 'password_imput',
+                    name: 'password_input',
                     type: 'password',
-                    palceholder: 'enter your password'
+                    placeholder: 'Enter your password'
                 },
                 validation:{
-                    required: true 
+                    required: true
                 },
-                valid: false, 
+                valid: false,
                 touched: false,
-                validataionMessage: ''
-            },
+                validationMessage:''
+            }
         }
     }
     updateForm = () => {
