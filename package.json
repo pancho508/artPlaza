@@ -19,7 +19,7 @@
     "express": "^4.16.4",
     "font-awesome": "^4.7.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.5.7",
+    "mongoose": "^5.7.5",
     "react-fontawesome": "^1.6.1",
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
